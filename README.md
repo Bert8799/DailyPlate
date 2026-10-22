@@ -34,16 +34,3 @@ DailyPlate 是一款面向个人用户的饮食记录与管理工具。用户拍
 
 ---
 
-## 系统架构（规划）
-
-```mermaid
-flowchart LR
-    U[用户] -->|拍照 / 录入| FE[Web 前端]
-    FE -->|REST API| BE[后端服务]
-    BE --> DB[(数据库)]
-    BE --> FS[图片存储]
-    BE --> VIS[食物识别与热量估算]
-    BE --> REC[推荐与总结引擎]
-    VIS --> BE
-    REC --> BE
-    BE -->|记录 / 建议 / 报告| FE
